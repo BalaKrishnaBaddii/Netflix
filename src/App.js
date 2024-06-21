@@ -11,14 +11,21 @@ export default function App() {
 
 function Container() {
   return (
-    <div className="container">
-      <Header>
-        <Logo />
-        <Language />
-        <SignIn />
-      </Header>
-      <Body />
-      <Footer />
+    <div className="background">
+      <div className="container">
+        <Header>
+          <Logo />
+          <div className="header-right">
+            <Language />
+            <Button>Sign In</Button>
+          </div>
+        </Header>
+        <Main>
+          <BlocA />
+          <BlockB />
+        </Main>
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -27,6 +34,9 @@ function Header({ children }) {
   return <div className="header">{children}</div>;
 }
 
+function Main({ children }) {
+  return <div className="main">{children}</div>;
+}
 function Logo() {
   return (
     <div className="logo">
@@ -48,7 +58,7 @@ function Logo() {
 function Language() {
   return (
     <div className="lang">
-      <div>
+      <span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -66,21 +76,60 @@ function Language() {
             fill="currentColor"
           ></path>
         </svg>
-      </div>
-      <select>
-        <option>English</option>
-        <option>Hindi</option>
+      </span>
+
+      <select className="lang-select">
+        <option className="lang-option">English</option>
+        <option className="lang-option">हिंदी</option>
       </select>
     </div>
   );
 }
 
-function SignIn() {
-  return <button>Sign In</button>;
+function Button({
+  children,
+  height = "1.8rem",
+  width = "4rem",
+  backgroundColor = "#f60808",
+  fontSize = "13px",
+}) {
+  const styles = {
+    backgroundColor,
+    color: "#fff",
+    border: "none",
+    outline: "0.3px solid #ffffff4d",
+    height,
+    width,
+    fontSize,
+    borderRadius: "5px",
+    fontWeight: "bold",
+    cursor: "pointer",
+  };
+  return <button style={styles}>{children}</button>;
 }
 
-function Body() {
-  return <div className="body">Body</div>;
+function BlocA() {
+  return (
+    <div className="main-a">
+      <p className="line-1">Unlimited movies, TV shows and more</p>
+      <h3>Watch anywhere. Cancel anytime.</h3>
+      <div className="search-container">
+        <p>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <div className="search-input-button">
+          <input type="text" placeholder="Enter Address"></input>
+          <Button height={"2.5rem"} width="25%" fontSize="1rem">
+            Get Started {">"}
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BlockB() {
+  return <div className="main-b">BlockB</div>;
 }
 
 function Footer() {
