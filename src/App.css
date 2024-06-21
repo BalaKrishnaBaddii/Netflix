@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
-}
+@import url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Netflix Sans Medium", sans-serif;
+  box-sizing: border-box;
+  font-size: 1.25rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container {
+  /* display: grid; */
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1.25rem;
+  margin: auto;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem 0 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  cursor: pointer;
+}
+
+.lang {
+  height: 1.8rem;
+  width: 6rem;
+  display: flex;
+  outline: 0.3px solid rgb(255, 255, 255, 0.3);
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+}
+
+.header select {
+  position: absolute;
+  height: 1.8rem;
+  width: 6rem;
+  font-size: 15px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700px;
+  margin-left: 2px;
+}
+.header select option {
+  font-size: 15px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 2rem;
+  outline: 0.3px solid rgb(255, 255, 255, 0.3);
+}
+
+.header button {
+  background-color: rgb(246, 8, 8);
+  color: #fff;
+  border: none;
+  outline: 0.3px solid rgb(255, 255, 255, 0.3);
+  height: 1.8rem;
+  width: 4rem;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: rgba(239, 65, 65, 0.9);
 }
