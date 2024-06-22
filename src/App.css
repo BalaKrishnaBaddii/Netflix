@@ -112,18 +112,20 @@ body {
 
 .search-input-button input {
   margin-right: 0.5rem;
-  height: 2.5rem;
-  width: 50%;
+  /* height: 2.8rem;
+  width: 55%; */
   font-size: 1rem;
-  padding: 20px;
+  padding: 0.7rem 4rem;
   background-color: transparent;
   border: none;
   color: #fff;
   outline: 0.25px solid rgb(255, 255, 255, 0.5);
+  box-shadow: 0 0 3px rgb(255, 255, 255, 0.3);
+  border-radius: 3px;
 }
 
 .search-input-button input:focus {
-  outline: 2px solid #fff;
+  outline: 2px solid rgb(255, 255, 255);
 }
 
 .search-container p {
@@ -185,5 +187,6 @@ body {
 .search-input-button button p:last-child {
   margin-left: 20px;
   font-weight: bold;
-  height: 20px;
+  vertical-align: baseline;
+  padding: 3px 0 0 0;
 }
