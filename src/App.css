@@ -181,3 +181,9 @@ body {
 .main-c img {
   height: 350px;
 }
+
+.search-input-button button p:last-child {
+  margin-left: 20px;
+  font-weight: bold;
+  height: 20px;
+}

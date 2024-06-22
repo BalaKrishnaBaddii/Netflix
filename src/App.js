@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 export default function App() {
@@ -88,24 +89,51 @@ function Language() {
 
 function Button({
   children,
-  height = "1.8rem",
-  width = "4rem",
+  padding = "0.5rem 1rem",
   backgroundColor = "#f60808",
   fontSize = "13px",
 }) {
   const styles = {
     backgroundColor,
+    display: "flex",
     color: "#fff",
     border: "none",
     outline: "0.3px solid #ffffff4d",
-    height,
-    width,
+    padding,
     fontSize,
     borderRadius: "5px",
     fontWeight: "bold",
     cursor: "pointer",
+    transition: "backgroundColor 0.15s, color 0.15s opacity 0.15s",
   };
-  return <button style={styles}>{children}</button>;
+
+  const hoverStyles = {
+    ...styles,
+    opacity: 0.9,
+  };
+
+  function handleClick() {
+    setStyle({
+      ...hoverStyles,
+      opacity: 0.7,
+    });
+    setTimeout(() => {
+      setStyle(hoverStyles);
+    }, 200);
+  }
+
+  const [style, setStyle] = useState(styles);
+
+  return (
+    <button
+      style={style}
+      onMouseEnter={() => setStyle(hoverStyles)}
+      onMouseLeave={() => setStyle(styles)}
+      onClick={handleClick}
+    >
+      {children}
+    </button>
+  );
 }
 
 function BlocA() {
@@ -119,8 +147,9 @@ function BlocA() {
         </p>
         <div className="search-input-button">
           <input type="text" placeholder="Enter Address"></input>
-          <Button height={"2.5rem"} width="25%" fontSize="1rem">
-            Get Started {">"}
+          <Button padding="0.6rem 1.5rem" fontSize="1rem">
+            <p>Get Started</p>
+            <p>&#62;</p>
           </Button>
         </div>
       </div>
