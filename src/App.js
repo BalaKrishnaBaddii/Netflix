@@ -1,4 +1,3 @@
-import { Children } from "react";
 import "./App.css";
 
 export default function App() {
@@ -23,6 +22,7 @@ function Container() {
         <Main>
           <BlocA />
           <BlockB />
+          <BlockC />
         </Main>
         <Footer />
       </div>
@@ -112,7 +112,7 @@ function BlocA() {
   return (
     <div className="main-a">
       <p className="line-1">Unlimited movies, TV shows and more</p>
-      <h3>Watch anywhere. Cancel anytime.</h3>
+      <p>Watch anywhere. Cancel anytime.</p>
       <div className="search-container">
         <p>
           Ready to watch? Enter your email to create or restart your membership.
@@ -129,7 +129,44 @@ function BlocA() {
 }
 
 function BlockB() {
-  return <div className="main-b">BlockB</div>;
+  return (
+    <div className="main-b">
+      <div className="text-block">
+        <p>Enjoy on your TV</p>
+        <p>
+          Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+          players and more.
+        </p>
+      </div>
+
+      <div className="video-block">
+        <img
+          alt="image2"
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+        />
+        <video autoPlay="">
+          <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" />
+        </video>
+      </div>
+    </div>
+  );
+}
+
+function BlockC() {
+  return (
+    <div className="main-c">
+      <div className="Mobile-block">
+        <img
+          alt="image2"
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+        />
+      </div>
+      <div className="text-block">
+        <p>Download your shows to watch offline</p>
+        <p>Save your favourites easily and always have something to watch.</p>
+      </div>
+    </div>
+  );
 }
 
 function Footer() {
