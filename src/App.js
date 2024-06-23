@@ -138,40 +138,43 @@ function Button({
 
 function BlocA() {
   return (
-    <div className="main-a">
-      <p className="line-1">Unlimited movies, TV shows and more</p>
-      <p>Watch anywhere. Cancel anytime.</p>
-      <div className="search-container">
-        <p>
-          Ready to watch? Enter your email to create or restart your membership.
-        </p>
-        <div className="search-input-button">
-          <input type="text" placeholder="Enter Address"></input>
-          <Button padding="0.55rem 1.5rem" fontSize="1rem">
-            <p>Get Started</p>
-            <p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                role="img"
-                data-icon="ChevronRightStandard"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </p>
-          </Button>
+    <>
+      <div className="main-a">
+        <p className="line-1">Unlimited movies, TV shows and more</p>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <div className="search-container">
+          <p>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+          <div className="search-input-button">
+            <input type="text" placeholder="Enter Address"></input>
+            <Button padding="0.55rem 1.5rem" fontSize="1rem">
+              <p>Get Started</p>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  role="img"
+                  data-icon="ChevronRightStandard"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </p>
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -191,9 +194,20 @@ function BlockB() {
           alt="image2"
           src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
         />
-        <video autoPlay="">
-          <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" />
-        </video>
+        <div>
+          <video
+            data-uia="nmhp-card-animation-asset-video"
+            autoplay=""
+            playsinline=""
+            muted=""
+            loop=""
+          >
+            <source
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+              type="video/mp4"
+            />
+          </video>
+        </div>
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ body {
   padding: 0px 1.5rem 0px 1.5rem;
   margin: auto;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   margin: 0px;
 }
 
@@ -112,10 +112,10 @@ body {
 
 .search-input-button input {
   margin-right: 0.5rem;
-  /* height: 2.8rem;
-  width: 55%; */
+  /* height: 2.8rem;*/
+  width: 55%;
   font-size: 1rem;
-  padding: 0.7rem 4rem;
+  padding: 0.7rem 4rem 0.7rem 0.5rem;
   background-color: transparent;
   border: none;
   color: #fff;
@@ -170,14 +170,24 @@ body {
 }
 
 .video-block {
-  width: 500px;
+  width: 470px;
   height: 100%;
 }
 
 .video-block img {
   width: 500px;
-  height: 400px;
+  height: 348px;
   position: absolute;
+}
+
+.video-block div {
+  height: 100%;
+  width: 48%;
+}
+.video-block video {
+  width: 430px;
+  height: 320px;
+  padding-left: 65px;
 }
 
 .main-c img {
