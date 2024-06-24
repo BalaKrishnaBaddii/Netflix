@@ -3,36 +3,41 @@ import "./App.css";
 
 export default function App() {
   return (
-    <>
-      <Container />
-    </>
+    <Container>
+      <Main>
+        <BlocA>
+          <Header>
+            <Logo />
+            <RightHead>
+              <Language />
+              <Button
+                fontSize="15px"
+                padding="0.3rem 0.7rem"
+                fontWeight="700px"
+              >
+                Sign In
+              </Button>
+            </RightHead>
+          </Header>
+        </BlocA>
+        <BlockB />
+        <BlockC />
+      </Main>
+      <Footer />
+    </Container>
   );
 }
 
-function Container() {
-  return (
-    <div className="background">
-      <div className="container">
-        <Header>
-          <Logo />
-          <div className="header-right">
-            <Language />
-            <Button>Sign In</Button>
-          </div>
-        </Header>
-        <Main>
-          <BlocA />
-          <BlockB />
-          <BlockC />
-        </Main>
-        <Footer />
-      </div>
-    </div>
-  );
+function Container({ children }) {
+  return <div className="container">{children}</div>;
 }
 
 function Header({ children }) {
   return <div className="header">{children}</div>;
+}
+
+function RightHead({ children }) {
+  return <div className="header-right">{children}</div>;
 }
 
 function Main({ children }) {
@@ -43,7 +48,7 @@ function Logo() {
     <div className="logo">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height="100"
+        height="90"
         width="200"
         viewBox="-153.6 -69.1855 1331.2 415.113"
       >
@@ -136,41 +141,50 @@ function Button({
   );
 }
 
-function BlocA() {
+function BlocA({ children }) {
   return (
     <>
-      <div className="main-a">
-        <p className="line-1">Unlimited movies, TV shows and more</p>
-        <p>Watch anywhere. Cancel anytime.</p>
-        <div className="search-container">
-          <p>
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </p>
-          <div className="search-input-button">
-            <input type="text" placeholder="Enter Address"></input>
-            <Button padding="0.55rem 1.5rem" fontSize="1rem">
-              <p>Get Started</p>
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  role="img"
-                  data-icon="ChevronRightStandard"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </p>
-            </Button>
+      <div className="background">
+        <img
+          src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          alt="background"
+        />
+      </div>
+      <div className="main-a-container">
+        {children}
+        <div className="main-a">
+          <p className="line-1">Unlimited movies, TV shows and more</p>
+          <p>Watch anywhere. Cancel anytime.</p>
+          <div className="search-container">
+            <p>
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </p>
+            <div className="search-input-button">
+              <input type="text" placeholder="Enter Address"></input>
+              <Button padding="0.55rem 1.5rem" fontSize="1rem">
+                <p>Get Started</p>
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    role="img"
+                    data-icon="ChevronRightStandard"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </p>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
