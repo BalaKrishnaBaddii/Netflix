@@ -110,6 +110,7 @@ function Button({
     fontWeight: "bold",
     cursor: "pointer",
     transition: "backgroundColor 0.15s, color 0.15s opacity 0.15s",
+    width: "100px",
   };
 
   const hoverStyles = {
@@ -154,16 +155,16 @@ function BlocA({ children }) {
         {children}
         <div className="main-a">
           <p className="line-1">Unlimited movies, TV shows and more</p>
-          <p>Watch anywhere. Cancel anytime.</p>
+          <p className="line-3">Watch anywhere. Cancel anytime.</p>
           <div className="search-container">
-            <p>
+            <p className="line-3">
               Ready to watch? Enter your email to create or restart your
               membership.
             </p>
             <div className="search-input-button">
               <input type="text" placeholder="Enter Address"></input>
-              <Button padding="0.55rem 1.5rem" fontSize="1rem">
-                <p>Get Started</p>
+              <Button>
+                <p className="button-text">Get Started</p>
                 <p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
