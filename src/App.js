@@ -12,7 +12,7 @@ export default function App() {
               <Language />
               <Button
                 fontSize="15px"
-                padding="0.3rem 0.7rem"
+                padding="0.3rem 0.8rem"
                 fontWeight="700px"
               >
                 Sign In
@@ -100,7 +100,6 @@ function Button({
 }) {
   const styles = {
     backgroundColor,
-    display: "flex",
     color: "#fff",
     border: "none",
     outline: "0.3px solid #ffffff4d",
@@ -110,7 +109,6 @@ function Button({
     fontWeight: "bold",
     cursor: "pointer",
     transition: "backgroundColor 0.15s, color 0.15s opacity 0.15s",
-    width: "100px",
   };
 
   const hoverStyles = {
@@ -163,28 +161,13 @@ function BlocA({ children }) {
             </p>
             <div className="search-input-button">
               <input type="text" placeholder="Enter Address"></input>
-              <Button>
-                <p className="button-text">Get Started</p>
-                <p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    role="img"
-                    data-icon="ChevronRightStandard"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </p>
-              </Button>
+
+              <div className="getstarted">
+                <Button padding=".7rem 1.2rem" fontSize="1rem">
+                  Get Started
+                  <p className="gt">&gt;</p>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
