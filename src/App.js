@@ -3,28 +3,22 @@ import "./App.css";
 
 export default function App() {
   return (
-    <Container>
-      <Main>
-        <BlocA>
-          <Header>
-            <Logo />
-            <RightHead>
-              <Language />
-              <Button
-                fontSize="15px"
-                padding="0.3rem 0.8rem"
-                fontWeight="700px"
-              >
-                Sign In
-              </Button>
-            </RightHead>
-          </Header>
-        </BlocA>
-        <BlockB />
-        <BlockC />
-      </Main>
+    <Main>
+      <BlocA>
+        <Header>
+          <Logo />
+          <RightHead>
+            <Language />
+            <Button fontSize="15px" padding="0.3rem 0.8rem" fontWeight="700px">
+              Sign In
+            </Button>
+          </RightHead>
+        </Header>
+      </BlocA>
+      {/* <BlockB />
+      <BlockC /> */}
       <Footer />
-    </Container>
+    </Main>
   );
 }
 
@@ -32,6 +26,9 @@ function Container({ children }) {
   return <div className="container">{children}</div>;
 }
 
+function Main({ children }) {
+  return <div className="main">{children}</div>;
+}
 function Header({ children }) {
   return <div className="header">{children}</div>;
 }
@@ -40,16 +37,13 @@ function RightHead({ children }) {
   return <div className="header-right">{children}</div>;
 }
 
-function Main({ children }) {
-  return <div className="main">{children}</div>;
-}
 function Logo() {
   return (
     <div className="logo">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height="90"
-        width="200"
+        height="120"
+        width="175"
         viewBox="-153.6 -69.1855 1331.2 415.113"
       >
         <path
@@ -64,7 +58,7 @@ function Logo() {
 function Language() {
   return (
     <div className="lang">
-      <span>
+      <p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -82,12 +76,13 @@ function Language() {
             fill="currentColor"
           ></path>
         </svg>
-      </span>
-
-      <select className="lang-select">
-        <option className="lang-option">English</option>
-        <option className="lang-option">हिंदी</option>
-      </select>
+      </p>
+      <div>
+        <select className="lang-select">
+          <option className="lang-option">English</option>
+          <option className="lang-option">हिंदी</option>
+        </select>
+      </div>
     </div>
   );
 }
@@ -129,29 +124,31 @@ function Button({
   const [style, setStyle] = useState(styles);
 
   return (
-    <button
-      style={style}
-      onMouseEnter={() => setStyle(hoverStyles)}
-      onMouseLeave={() => setStyle(styles)}
-      onClick={handleClick}
-    >
-      {children}
-    </button>
+    <div className="btn-div">
+      <button
+        style={style}
+        onMouseEnter={() => setStyle(hoverStyles)}
+        onMouseLeave={() => setStyle(styles)}
+        onClick={handleClick}
+      >
+        {children}
+      </button>
+    </div>
   );
 }
 
 function BlocA({ children }) {
   return (
     <>
-      <div className="background">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_small.jpg"
-          alt="background"
-        />
-      </div>
-      <div className="main-a-container">
+      <img
+        className="background"
+        src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+        alt="background"
+      />
+
+      <div className="main-a">
         {children}
-        <div className="main-a">
+        {/* <div className="main-a">
           <p className="line-1">Unlimited movies, TV shows and more</p>
           <p className="line-3">Watch anywhere. Cancel anytime.</p>
           <div className="search-container">
@@ -170,7 +167,7 @@ function BlocA({ children }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
