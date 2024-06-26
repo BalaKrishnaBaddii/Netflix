@@ -15,7 +15,6 @@ body {
 }
 
 .main {
-  display: flex;
   flex-direction: column;
   background-color: dodgerblue;
   flex-shrink: 0;
@@ -38,17 +37,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1px 100px;
-  padding: 0px 30px;
+  padding: 0px 140px;
 }
 
 .logo {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 80px;
+}
+
+.logo svg {
   height: 120px;
 }
 
 .header-right {
   display: flex;
-  flex: 1;
+  flex: 2;
+  height: 32px;
   align-items: center;
   justify-content: space-between;
   justify-content: end;
@@ -56,35 +62,34 @@ body {
 
 .lang {
   display: flex;
-  width: 130px;
-  align-items: center;
-  justify-content: space-between;
   border: 0.5px solid rgb(255, 255, 255, 0.3);
   margin-right: 30px;
-  max-width: 200px;
+  margin-left: 30px;
+  height: 32px;
+  padding: 0px 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
 }
 
 .lang p {
   flex: 1;
-  width: 0;
-  display: flex;
-  margin-right: 5px;
-  margin-left: 5px;
-  /* width: 20px; */
+  padding-right: 5px;
 }
+
 .lang div {
-  /* flex: 1;
-  width: 0; */
+  flex: 2;
 }
+
 .lang-select {
-  width: 80px;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 700px;
-  height: 1.6rem;
   border: none;
   background-color: transparent;
   color: #fff;
+  height: 32px;
+  padding-right: 5px;
 }
 
 .lang option {
@@ -96,5 +101,21 @@ body {
 }
 
 .btn-div {
-  width: 90px;
+  display: flex;
+  width: 100px;
+}
+
+@media (max-width: 1276px) {
+  .header {
+    padding: 0; /* Remove padding */
+  }
+}
+
+@media (max-width: 450px) {
+  .lang-select {
+    max-width: 18px; /* Shrink width as needed */
+  }
+  .logo svg {
+    padding: 30px;
+  }
 }
