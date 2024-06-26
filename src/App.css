@@ -3,7 +3,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+  font-family: "Netflix Sans", Helvetica Neue, Segoe UI, Roboto, Ubuntu,
     sans-serif;
   box-sizing: border-box;
   font-size: 1.25rem;
@@ -28,6 +28,8 @@ body {
 }
 
 .main-a {
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
@@ -35,6 +37,7 @@ body {
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0px 140px;
@@ -100,9 +103,68 @@ body {
   border: none;
 }
 
-.btn-div {
+/* .btn-div {
   display: flex;
   width: 100px;
+} */
+
+.main-a-middlebox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-1 {
+  font-size: 48px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.line-2 {
+  font-size: 25px;
+  font-weight: 700px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.line-3 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.search-input-button input {
+  width: 420px;
+  height: 60px;
+  margin-right: 12px;
+}
+
+.search-input-button getstarted {
+  height: 60px;
+  width: 200px;
+  align-items: center;
+}
+
+.search-input-button p {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.gt {
+  margin-left: 8px;
 }
 
 @media (max-width: 1276px) {
@@ -111,10 +173,21 @@ body {
   }
 }
 
+@media (max-width: 1023px) {
+  .lang {
+    margin-right: 5px;
+  }
+}
 @media (max-width: 450px) {
   .lang-select {
     max-width: 18px; /* Shrink width as needed */
   }
+  .logo svg {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 750px) {
   .logo svg {
     padding: 30px;
   }

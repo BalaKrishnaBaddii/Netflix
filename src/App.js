@@ -9,7 +9,13 @@ export default function App() {
           <Logo />
           <RightHead>
             <Language />
-            <Button fontSize="15px" padding="0.3rem 0.8rem" fontWeight="700px">
+            <Button
+              fontSize="15px"
+              padding="0.3rem 0.8rem"
+              fontWeight="700px"
+              width="90px"
+              height="32px"
+            >
               Sign In
             </Button>
           </RightHead>
@@ -42,7 +48,7 @@ function Logo() {
     <span className="logo">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height="120"
+        height="10"
         width="175"
         viewBox="-153.6 -69.1855 1331.2 415.113"
       >
@@ -92,9 +98,13 @@ function Button({
   padding = "0.5rem 1rem",
   backgroundColor = "#f60808",
   fontSize = "13px",
+  width = "20px",
+  height = "20px",
 }) {
   const styles = {
     backgroundColor,
+    width,
+    height,
     color: "#fff",
     border: "none",
     outline: "0.3px solid #ffffff4d",
@@ -148,9 +158,9 @@ function BlocA({ children }) {
 
       <div className="main-a">
         {children}
-        {/* <div className="main-a">
+        <div className="main-a-middlebox">
           <p className="line-1">Unlimited movies, TV shows and more</p>
-          <p className="line-3">Watch anywhere. Cancel anytime.</p>
+          <p className="line-2">Watch anywhere. Cancel anytime.</p>
           <div className="search-container">
             <p className="line-3">
               Ready to watch? Enter your email to create or restart your
@@ -160,14 +170,19 @@ function BlocA({ children }) {
               <input type="text" placeholder="Enter Address"></input>
 
               <div className="getstarted">
-                <Button padding=".7rem 1.2rem" fontSize="1rem">
-                  Get Started
+                <Button
+                  padding="13px 20px"
+                  fontSize=""
+                  width="200px"
+                  height="60px"
+                >
+                  <p>Get Started</p>
                   <p className="gt">&gt;</p>
                 </Button>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
