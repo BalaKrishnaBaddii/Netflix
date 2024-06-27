@@ -4,7 +4,8 @@ import "./App.css";
 export default function App() {
   return (
     <Main>
-      <BlocA>
+      <Background />
+      <MainA>
         <Header>
           <Logo />
           <RightHead>
@@ -20,11 +21,23 @@ export default function App() {
             </Button>
           </RightHead>
         </Header>
-      </BlocA>
+      </MainA>
       {/* <BlockB />
       <BlockC /> */}
-      <Footer />
+      {/* <Footer /> */}
     </Main>
+  );
+}
+
+function Background() {
+  return (
+    <div className="background">
+      <img
+        src="https://assets.nflxext.com/ffe/siteui/vlv3/1fd8c6d0-20db-4667-860e-dd1ad7353ac0/10f8d166-7c8c-499a-b16f-57c3740cdeae/IN-en-20240624-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+        alt="background"
+      />
+      <div className="black-layout"> </div>
+    </div>
   );
 }
 
@@ -147,15 +160,9 @@ function Button({
   );
 }
 
-function BlocA({ children }) {
+function MainA({ children }) {
   return (
     <>
-      <img
-        className="background"
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_small.jpg"
-        alt="background"
-      />
-
       <div className="main-a">
         {children}
         <div className="main-a-middlebox">
