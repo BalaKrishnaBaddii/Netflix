@@ -65,7 +65,6 @@ body {
   left: 150px;
   position: absolute;
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-between;
 }
@@ -85,7 +84,7 @@ body {
   display: flex;
   flex: 2;
   height: 32px;
-  align-items: center;
+  align-items: end;
   justify-content: end;
 }
 
@@ -136,6 +135,7 @@ body {
   line-height: 50px;
   align-items: center;
   justify-content: center;
+  padding-top: 170px;
 }
 
 .line-1 {
@@ -145,8 +145,8 @@ body {
 }
 
 .line-2 {
-  font-size: 1.25rem;
-  font-weight: 700px;
+  font-size: 1.15rem;
+  font-weight: 500px;
   margin-top: 1rem;
   text-align: center;
 }
@@ -154,33 +154,43 @@ body {
 .search-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .line-3 {
   flex: 1;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500px;
+  text-align: center;
 }
 
 .search-input-button {
   display: flex;
-  justify-content: center;
+  flex: 1;
   padding: 10px;
-  max-width: 800px;
+  align-items: center;
 }
 
 .search-input-button input {
-  /* width: 420px; */
-  flex: 2;
-  height: 60px;
-  margin-right: 12px;
-  width: 300px;
+  height: 55px;
+  width: 400px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 0.5px solid gray;
+  color: #fff;
+  font-size: 1rem;
 }
 
-.search-input-button getstarted {
-  height: 60px;
-  /* width: 200px; */
-  /* flex: 1; */
+.search-input-button input::placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+
+.getstarted {
+  height: 55px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .search-input-button p {
@@ -194,12 +204,10 @@ body {
 
 @media (max-width: 1276px) {
   .header {
-    padding: 0; /* Remove padding */
-  }
-
-  .header {
     right: 0;
     left: 0;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
@@ -219,7 +227,7 @@ body {
 }
 @media (max-width: 450px) {
   .lang-select {
-    max-width: 18px; /* Shrink width as needed */
+    max-width: 18px;
   }
   .logo svg {
     padding: 30px;
@@ -229,10 +237,25 @@ body {
   .line-3 {
     font-size: 1rem;
   }
+
+  .line-1 {
+    font-size: 1.8rem;
+  }
+
+  .search-container {
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 750px) {
   .logo svg {
     padding: 30px;
+  }
+  .search-input-button {
+    flex-direction: column;
+  }
+
+  .getstarted {
+    margin-top: 20px;
   }
 }

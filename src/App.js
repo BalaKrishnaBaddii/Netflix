@@ -168,27 +168,26 @@ function MainA({ children }) {
         <div className="main-a-middlebox">
           <p className="line-1">Unlimited movies, TV shows and more</p>
           <p className="line-2">Watch anywhere. Cancel anytime.</p>
-          <div className="search-container">
+          <form className="search-container">
             <p className="line-3">
               Ready to watch? Enter your email to create or restart your
               membership.
             </p>
             <div className="search-input-button">
               <input type="text" placeholder="Enter Address"></input>
-
               <div className="getstarted">
                 <Button
                   padding="13px 20px"
                   fontSize=""
                   width="200px"
-                  height="60px"
+                  height="55px"
                 >
                   <p>Get Started</p>
                   <p className="gt">&gt;</p>
                 </Button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>
