@@ -22,8 +22,8 @@ export default function App() {
           </RightHead>
         </Header>
       </MainA>
-      {/* <BlockB />
-      <BlockC /> */}
+      <BlockB />
+      {/* <BlockC /> */}
       {/* <Footer /> */}
     </Main>
   );
@@ -206,11 +206,14 @@ function BlockB() {
       </div>
 
       <div className="video-block">
-        <img
-          alt="image2"
-          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
-        />
-        <div>
+        <div className="tv-container">
+          <img
+            className="tv"
+            alt="image2"
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+          />
+        </div>
+        <div className="video-container">
           <video
             data-uia="nmhp-card-animation-asset-video"
             autoplay=""

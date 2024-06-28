@@ -17,7 +17,6 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  background-color: dodgerblue;
   height: 3000px;
 }
 
@@ -180,11 +179,17 @@ body {
   border: 0.5px solid gray;
   color: #fff;
   font-size: 1rem;
+  padding-left: 20px;
 }
 
 .search-input-button input::placeholder {
   color: #fff;
   font-size: 16px;
+}
+.search-input-button input:focus {
+  outline: 2px solid white;
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 .getstarted {
@@ -245,6 +250,10 @@ body {
   .search-container {
     line-height: 30px;
   }
+
+  .search-input-button input {
+    height: 45px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -258,4 +267,61 @@ body {
   .getstarted {
     margin-top: 20px;
   }
+}
+
+/*   B - Block              */
+
+.main-b {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row;
+  padding-left: 10%;
+}
+
+.text-block {
+  flex: 1;
+  border: 1px solid red;
+  flex-direction: row;
+  padding: 80px 0px 80px 80px;
+}
+
+.text-block p:nth-child(1) {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.text-block p:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 500px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.video-block {
+  position: relative;
+}
+
+.tv-container {
+  position: relative;
+  flex: 1;
+}
+
+.tv-container img {
+  width: 80%;
+
+  border: 1px solid slateblue;
+}
+
+.video-container {
+  position: absolute;
+  top: 20.5%;
+  right: 200px;
+}
+
+.video-container video {
+  width: 375px;
+  height: 210px;
 }
